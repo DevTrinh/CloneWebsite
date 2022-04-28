@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* đây được gọi là reset css */
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    /* cài font chữ cho trang web */
+}
+
+/* 
+    NGUYÊN TẮC: 
+    1. TỪ TRÊN XUỐNG DƯỚI
+    2. TỪ NGOÀI VÀO TRONG
+    3. TỪ TỔNG QUAN ĐẾN CHI TIẾT
+*/
+/* 
+`   1. Vị trí 
+    2. Kích thước
+    3. Màu sắc
+    4. Kiểu dáng
+*/
+#main{
+
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background: #000;
+    z-index: 1;
+}
+
+#nav{
+    display:inline-block;
+}
+
+#nav>li{
+    /* css vào thẻ li thuộc con của id nav*/
+    display: inline-block;
+    /* mặc định của các thẻ là inline */
+    /* Các item sẽ được xét tại một dòng và chiếm diện tích của 4 hướng */
+    position: relative;
+}
+
+#nav .subnav{
+    list-style: none;
+}
+
+#nav .subnav{
+    /* css vào  class subnav là con của id nav */
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.3);
+    display: none;
+    min-width: 160px;
+    top: 100%;
+}
+#nav .subnav a{
+    color: #000;
+    display:block;
+    padding: 0px 12px;
+    /* line-height: 38px; */
+}
+
+#nav .subnav li:hover a,
+#nav>li:hover>a{
+    /* khi chúg ta hover vào thẻ li
+     là con thằng nav thì con của li được hover */
+    color: #000;
+    background: rgb(139, 134, 134);
+    font-weight: 600;
+}
+
+#nav li:hover .subnav{
+    /* hover vào thẻ li có con là subnav */
+    display: block;
+}
+
+#nav>li>a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+.nav-search{
+    color: #fff;
+    float: right;
+    line-height: 46px;
+    padding: 0px 15px;
+}
+
+a:hover .nav-search{
+    background-color: red;
+    font-weight: 600;
+}
+
+
+#nav li a{
+    /* CSS vào thẻ a thuộc con của li và li là con của id nav */
+    text-decoration: none;
+    line-height: 46px;
+    /* chiều cao của chữ line-height*/
+    padding: 0px 24px;
+    display:inline-block;
+     /* ăn theoo line-height */ 
+}
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/w3school/assets/img/slider/LinhYeuDau4.jpg')top center   / cover  no-repeat ;
+    background-size: 100%;
+    position: relative;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    /* cách để căn giữa */
+    /* cách 1:  */
+    width: 100%;
+    /* cách 2:  */
+    /* right: 50%;
+    transform: translateX(-50%); */
+    /* cách3:  tưƠng đương với width 100%*/
+    /* left: 0;
+    right: 0; */
+    text-align: center;
+}
+
+#slider .text-heading h2{
+    font-weight: 500;
+    font-size: 24px;
+    margin: 15px 0px;
+
+}
+
+#slider .text-description{
+    font-size: 15px;
+}
+
+
+#content{
+
+}
+
+#content .content-section{
+    padding: 64px 0px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#content .section-subheading{
+    text-align: center;
+    opacity: 0.6;
+}   
+
+#content .about-text{
+    text-align: justify;
+}
+
+
+#footer{
+
+}
